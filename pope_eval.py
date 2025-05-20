@@ -275,7 +275,7 @@ def main():
     print("Start eval...")
     pred_list, pred_list_s, label_list = [], [], []
     # for batch_id, data in tqdm(enumerate(pope_loader), total=len(pope_loader)):
-    for batch_id, data in enumerate(pope_loader):
+    for batch_id, data in tqdm(enumerate(pope_loader), total=len(pope_loader)):
         image = data["image"]
         qu = data["query"]
         label = data["label"]
